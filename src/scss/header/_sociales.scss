@@ -1,0 +1,49 @@
+@use "../base/mixins";
+@use "../base/variables";
+
+.sociales{
+    display: flex;
+    margin: 5rem 0;
+    @include mixins.tablet{
+        margin: 0;
+    }
+    &__enlace{
+        margin: 1rem;
+        background-repeat: no-repeat;
+        &::before{
+            content: "";
+            padding: 1.7rem;
+            display: inline-block;
+            
+        }
+        &[href*="facebook.com"]{
+             background-image: url(../img/icono_facebook.svg);
+             
+        }
+        &[href*="twitter.com"]{
+            background-image: url(../img/icono_twitter.svg);
+        }
+        &[href*="instagram"]{
+            background-image: url(../img/icono_instagram.svg);
+        }
+        &[href*="youtube"]{
+            background-image: url(../img/icono_youtube.svg);
+        }
+        &[href*="tiktok"]{
+            background-image: url(../img/icono_tiktok.svg);
+        }
+        &[href*="pinterest"]{
+            background-image: url(../img/icono_pinterest.svg);
+        }
+    }
+    &__accesible{
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0,0,0,0);
+        border: 0;
+        display: block;
+    }
+}

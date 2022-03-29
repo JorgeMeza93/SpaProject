@@ -1,2 +1,15 @@
 @use "../base/mixins";
 @use "../base/variables";
+
+.header{
+    padding-top: 5rem;
+    &__grid{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include mixins.tablet{ 
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+}
