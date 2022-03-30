@@ -1,0 +1,52 @@
+@use "../base/mixins";
+@use "../base/variables";
+
+.cards{
+
+    &__grid{
+        @include mixins.tablet{
+            @include mixins.grid(3, 2rem);
+        }
+    }
+}
+.card{
+    max-width: 35rem;
+    margin: 0 auto 2rem auto;
+    &:last-of-type{
+        margin-bottom: 0;
+    }
+    @include mixins.tablet{
+        max-width: unset;
+        margin: 0;
+    }
+    &__imagen{
+        width: 100%;
+        border: .5rem solid variables.$blanco;
+        transition-property: rotate scale;
+        transition-duration: 300;
+        &:hover{
+            transform: rotate(4deg) scale(1.1);
+        }
+    }
+    &__contenido{
+        max-width: 90%;
+        margin: -5rem auto 0 auto;
+        background-color: variables.$blanco;
+        position: relative;  // TAMBIEN FUNCIONA CON LA PROPIEDAD transform: translateY(-5rem);
+    }
+    &__heading{
+        @include mixins.headingCursiva;
+        font-size: 3.4rem;
+        padding: 2rem
+    }
+    &__enlace{
+        @include mixins.boton(variables.$secundario, variables.$blanco);
+        display: block;
+    }
+
+}
+
+
+
+
+
