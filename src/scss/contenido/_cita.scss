@@ -1,0 +1,27 @@
+@use "../base/mixins";
+@use "../base/variables";
+
+.cita{
+    background-image: url(../img/bg_citas.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed; //<------- Efecto especial al background
+    padding: 5rem 0;
+    text-align: center;  // <------Se tuvo que poner eso para que el enlace quedara alineado al centro
+    &__heading{
+        @include mixins.heading;
+        color: variables.$blanco;
+        font-size: 6rem;
+    }
+    &__texto{
+        max-width: 60rem;
+        margin: 0 auto;
+        color: variables.$blanco;
+        text-align: center;
+        line-height: 2;
+    }
+    &__enlace{
+        @include mixins.boton(variables.$primario, variables.$blanco);
+        padding: 2rem 10rem;
+    }
+}

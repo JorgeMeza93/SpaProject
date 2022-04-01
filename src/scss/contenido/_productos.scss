@@ -1,0 +1,52 @@
+@use "../base/mixins";
+@use "../base/variables";
+
+.productos{
+    &__heading{
+        @include mixins.headingCursiva;
+        margin-bottom: 5rem;
+    }
+    &__grid{
+        @include mixins.grid(1, 2rem);
+        @include mixins.tablet{
+            @include mixins.grid(2, 2rem);
+        }
+        @include mixins.desktop{
+            @include mixins.grid(4, 2rem);
+        }
+    }
+}
+.producto{
+    &__contenido{
+        background-color: variables.$blanco;
+        padding: 2rem;
+    }
+    &__mask{
+        overflow: hidden;
+    }
+    &__imagen{
+        width: 100%;
+        transition-property: transform;
+        transition-duration: .5s;
+        &:hover{
+            transform: scale(1.2);
+        }
+    }
+    &__nombre{
+        @include mixins.headingCursiva;
+        font-size: 2.4rem;
+        color: variables.$secundario;
+    }
+    &__descripcion{
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        line-height: 1.8;
+    }
+    &__precio{
+        text-align: center;
+        color: variables.$gris;
+        margin: 0;
+        font-size: 2.8rem;
+    }
+   
+}

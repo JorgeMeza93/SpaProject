@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Lato:wght@400;700;900&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="build/css/app.css">
 </head>
 <body>
@@ -49,10 +50,17 @@
             </nav>
         </div>
     </div>
-    <section class="slider">
+    <section class="slider contenedor">
+
         <ul class="slider__contenedor">
-            <li class="slider slide">
-                <img src="build/img/slide_03.jpg" alt="slide">
+            <li class="slider__slide">
+                <img class="slider__imagen" src="build/img/slide_03.jpg" alt="slide">
+            </li>
+            <li class="slider__slide">
+                <img class="slider__imagen" src="build/img/slide_02.jpg" alt="slide">
+            </li>
+            <li class="slider__slide">
+                <img class="slider__imagen" src="build/img/slide_01.jpg" alt="slide">
             </li>
         </ul>
     </section>
@@ -130,7 +138,7 @@
                         <tr class="tabla__tr">
                             <td class="tabla__td">Sábado</td>
                             <td class="tabla__td">10:00</td>
-                            <td class="tabla__td">19:00</td>
+                            <td class="tabla__td">16:00</td>
                         </tr>
                         <tr class="tabla__tr">
                             <td class="tabla__td">Domingo</td>
@@ -141,5 +149,108 @@
             </div>
         </div>
     </section>
+    <main class="productos contenedor seccion">
+        <h2 class="productos__heading">nuestros <span>productos</span></h2>
+        <div class="productos__grid">
+            <div class="producto">
+                <div class="producto__mask">
+                    <img src="build/img/producto_01.jpg" alt="producto" class="producto__imagen">
+                </div>
+                <div class="producto__contenido">
+                    <h3 class="producto__nombre">Producto 1</h3>
+                    <p class="producto__descripcion">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem dolorum veniam earum iure magni modi, deleniti itaque. At quibusdam enim non atque?
+                    </p>
+                    <div class="producto__precio">$25</div>
+                </div>
+            </div> <!--Producto-->
+            <div class="producto">
+                <div class="producto__mask">
+                    <img src="build/img/producto_02.jpg" alt="producto" class="producto__imagen">
+                </div>
+                <div class="producto__contenido">
+                    <h3 class="producto__nombre">Producto 2</h3>
+                    <p class="producto__descripcion">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem dolorum veniam earum iure magni modi, deleniti itaque. At quibusdam enim non atque?
+                    </p>
+                    <div class="producto__precio">$25</div>
+                </div>
+            </div> <!--Producto-->
+            <div class="producto">
+                <div class="producto__mask">
+                    <img src="build/img/producto_03.jpg" alt="producto" class="producto__imagen">
+                </div>
+                <div class="producto__contenido">
+                    <h3 class="producto__nombre">Producto 3</h3>
+                    <p class="producto__descripcion">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem dolorum veniam earum iure magni modi, deleniti itaque. At quibusdam enim non atque?
+                    </p>
+                    <div class="producto__precio">$75</div>
+                </div>
+            </div> <!--Producto-->
+            <div class="producto">
+                <div class="producto__mask">
+                    <img src="build/img/producto_04.jpg" alt="producto" class="producto__imagen">
+                </div>
+                <div class="producto__contenido">
+                    <h3 class="producto__nombre">Producto 4</h3>
+                    <p class="producto__descripcion">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem dolorum veniam earum iure magni modi, deleniti itaque. At quibusdam enim non atque?
+                    </p>
+                    <div class="producto__precio">$85</div>
+                </div>
+            </div> <!--Producto-->
+        </div>
+    </main>
+    <section class="cita">
+        <h2 class="cita__heading">Realiza una cita</h2>
+        <p class="cita__texto">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate asperiores, dignissimos quae necessitatibus assumenda suscipit praesentium itaque totam?
+        </p>
+        <a href="#" class="cita__enlace">Leer más</a>
+    </section>
+    <footer class="footer">
+        <div class="footer__grid contenedor">
+            <div class="footer__widget">
+                <h3 class="footer__heading">Nosotros</h3>
+                <p class="footer__texto">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non incidunt a adipisci neque doloribus vero natus at ab provident iusto! Ipsa.
+                </p>
+            </div> <!--footer widget-->
+            <div class="footer__widget">
+                <h3 class="footer__heading">Horario</h3>
+                <p class="footer__texto">Lun-Vie: 10AM - 7PM</p>
+                <p class="footer__texto">Sábado: 10AM - 4PM</p>
+                <p class="footer__texto">Domingo: Cerrado</p>
+            </div> <!--Footer widget-->
+            <div class="footer__widget">
+                <h3 class="footer__heading">Contacto</h3>
+                <p class="footer__texto">Calle Londres 212, Benito Juárez, Ciudad de México</p>       
+                <nav class="sociales">
+                    <a class="sociales__enlace" href="https://www.facebook.com">
+                        <span class="sociales__accesible">Facebook</span>
+                    </a>
+                    <a class="sociales__enlace" href="https://www.twitter.com">
+                        <span class="sociales__accesible">Twitter</span>
+                    </a>
+                    <a class="sociales__enlace" href="https://www.instagram.com">
+                        <span class="sociales__accesible">Instagram</span>
+                    </a>
+                    <a class="sociales__enlace" href="https://www.youtube.com">
+                        <span class="sociales__accesible">YouTube</span>
+                    </a>
+                    <a class="sociales__enlace" href="https://www.tiktok.com">
+                        <span class="sociales__accesible">TikTok</span>
+                    </a>
+                    <a class="sociales__enlace" href="https://www.pinterest.com">
+                        <span class="sociales__accesible">Pinterest</span>
+                    </a>
+                </nav>  
+            </div>
+        </div>
+        <p class="footer__copyright">Carolina Spa 2022. Todos los derechos reservados</p>
+    </footer>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
